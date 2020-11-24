@@ -1,11 +1,11 @@
 package ru.job4j.converter;
 
 public class Converter {
-    public float rublesToDollars(float rubles) {
+    public int rublesToDollars(int rubles) {
         return rubles / 60;
     }
 
-    public float rublesToEuros(float rubles) {
+    public int rublesToEuros(int rubles) {
         return rubles / 70;
     }
 
@@ -14,8 +14,8 @@ public class Converter {
         float dollarsExpect = 7;
         float eurosExpect = 6;
         Converter converter = new Converter();
-        float resultDollars = converter.rublesToDollars(firstRubles);
-        float resultEuros = converter.rublesToEuros(firstRubles);
+        int resultDollars = converter.rublesToDollars(firstRubles);
+        int resultEuros = converter.rublesToEuros(firstRubles);
         boolean passedDollars = dollarsExpect == converter.rublesToDollars(firstRubles);
         boolean passedEuros = eurosExpect == converter.rublesToEuros(firstRubles);
         System.out.println(firstRubles + " rubles are " + resultDollars + " dollars");
