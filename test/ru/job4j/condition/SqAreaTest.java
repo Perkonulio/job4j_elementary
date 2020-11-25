@@ -11,10 +11,8 @@ public class SqAreaTest {
     public void square() {
         double per = 6;
         double k = 2;
-        double high = per / (2 * (k + 1));
-        double length = high * k;
-        double result =  length * high;
-        double expected = 2;
-        assertEquals(expected, result, 0.1);
+        SqArea sqArea = new SqArea();
+        int expected = 2;
+        assertEquals(expected, sqArea.square(per, k), 0.1);
     }
 }
