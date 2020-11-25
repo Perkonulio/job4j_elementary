@@ -11,8 +11,8 @@ public class FitTest {
     @Test
     public void manWeight() {
         short height = 180;
-        double result = (height - 100) * 1.15;
         Fit fit = new Fit();
+        double result = 92;
         double out = fit.manWeight(height);
         assertEquals(result, out, 0.1);
     }
@@ -20,8 +20,8 @@ public class FitTest {
     @Test
     public void womanWeight() {
         short height = 180;
-        double result = (height - 110) * 1.15;
         Fit fit = new Fit();
+        double result = 80.5;
         double out = fit.womanWeight(height);
         assertEquals(result, out, 0.1);
     }
