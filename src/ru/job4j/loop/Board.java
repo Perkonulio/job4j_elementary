@@ -1,7 +1,5 @@
 package ru.job4j.loop;
 
-import java.util.function.BinaryOperator;
-
 public class Board {
     public void paint(int width, int height) {
         for (int i = 0; i < height; i++) {
