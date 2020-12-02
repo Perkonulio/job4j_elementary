@@ -5,7 +5,7 @@ public class Mortgage {
         int year = 0;
         double remains = credit;
         while (remains > 0) {
-            remains = remains + remains * percent;
+            remains = remains + remains * (percent / 100);
             remains = remains - salary;
             year++;
         }
