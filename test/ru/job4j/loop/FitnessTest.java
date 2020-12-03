@@ -22,6 +22,6 @@ public class FitnessTest {
     @Test
     public void monthProgress3() {
         Fitness fitness = new Fitness();
-        assertThat(fitness.monthProgress(90, 100), is(1));
+        assertThat(fitness.monthProgress(90, 90), is(1));
     }
 }
