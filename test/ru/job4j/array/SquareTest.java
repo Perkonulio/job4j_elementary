@@ -11,4 +11,5 @@ public class SquareTest {
         Square square = new Square();
         square.squareArray(5);
     }
+
 }
