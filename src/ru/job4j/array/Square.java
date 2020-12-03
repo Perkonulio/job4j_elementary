@@ -8,7 +8,7 @@ public class Square {
         }
         return result;
     }
-
+    
     public static void main(String[] args) {
         Square square = new Square();
         int[] result = square.squareArray(5);
