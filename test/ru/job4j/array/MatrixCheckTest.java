@@ -18,4 +18,29 @@ public class MatrixCheckTest {
         boolean result = matrixCheck.bingo(input, 2);
         assertThat(result, is(true));
     }
+
+    @Test
+    public void whenHasMonoVertical() {
+        MatrixCheck matrixCheck = new MatrixCheck();
+        char[][] input = {
+                {' ', ' ', 'X'},
+                {' ', ' ', 'X'},
+                {' ', ' ', 'X'},
+        };
+        boolean result = matrixCheck.bingoVertical(input, 1);
+        assertThat(result, is(false));
+    }
+
+    @Test
+    public void whenDiagonal() {
+        MatrixCheck matrixCheck = new MatrixCheck();
+        char[][] input = {
+                {'X', ' ', ' '},
+                {' ', 'X', ' '},
+                {' ', ' ', 'X'},
+        };
+        char[] result = matrixCheck.bingoDiagonal(input);
+        char[] expect = {'X', 'X', 'X'};
+        assertThat(result, is(expect));
+    }
 }
