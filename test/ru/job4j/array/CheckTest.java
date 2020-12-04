@@ -20,4 +20,11 @@ public class CheckTest {
         boolean[] inputData = new boolean[] {true, false, false, false};
         assertThat(check.agreeChoice(inputData), is(true));
     }
+
+    @Test
+    public void agreeChoice3() {
+        Check check = new Check();
+        boolean[] inputData = new boolean[] {false, false, false, false};
+        assertThat(check.agreeChoice(inputData), is(true));
+    }
 }
