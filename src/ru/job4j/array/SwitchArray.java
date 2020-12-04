@@ -16,6 +16,13 @@ public class SwitchArray {
         return number;
     }
 
+    public String[] swapToString(String[] array, int index1, int index2) {
+        String temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
+        return array;
+    }
+
     public static void main(String[] args) {
         SwitchArray switchArray = new SwitchArray();
         int[] arrayNumber = new int[] {1, 4, 5, 6, 8};
