@@ -10,6 +10,6 @@ public class CheckPrimeNumberTest {
     @Test
     public void check() {
         CheckPrimeNumber checkPrimeNumber = new CheckPrimeNumber();
-        assertThat(checkPrimeNumber.check(5), is(true));
+        assertThat(checkPrimeNumber.check(11), is(true));
     }
 }
