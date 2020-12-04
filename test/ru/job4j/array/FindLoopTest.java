@@ -30,4 +30,12 @@ public class FindLoopTest {
         int expected = 2;
         assertThat(findLoop.loopFromArrayInRange(inputData, 3, 2, 5), is(expected));
     }
+
+    @Test
+    public void loopFromArrayInRangeOut() {
+        FindLoop findLoop = new FindLoop();
+        int[] inputData = {1, 2, 3, 4, 5, 8};
+        int expected = 2;
+        assertThat(findLoop.loopFromArrayInRange(inputData, 1, 2, 5), is(expected));
+    }
 }
