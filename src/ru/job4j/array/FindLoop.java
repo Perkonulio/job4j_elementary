@@ -11,4 +11,15 @@ public class FindLoop {
         }
         return result;
     }
+
+    public int loopFromArrayInRange(int[] arrayNumber, int numberForSearch, int startRange, int finishRange) {
+        int result = -1;
+        for (int i = startRange; i <= finishRange; i++) {
+            if (arrayNumber[i] == numberForSearch) {
+                result = i;
+                break;
+            }
+        }
+        return result;
+    }
 }

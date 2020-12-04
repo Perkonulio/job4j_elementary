@@ -22,4 +22,12 @@ public class FindLoopTest {
         int expected = 4;
         assertThat(findLoop.loopFromArray(number, 9), is(expected));
     }
+
+    @Test
+    public void loopFromArrayInRange() {
+        FindLoop findLoop = new FindLoop();
+        int[] inputData = {1, 2, 3, 4, 5, 8};
+        int expected = 2;
+        assertThat(findLoop.loopFromArrayInRange(inputData, 3, 2, 5), is(expected));
+    }
 }
