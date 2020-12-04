@@ -34,4 +34,15 @@ public class MatrixCheck {
         }
         return result;
     }
+
+    public boolean isWin(char[][] dataSymbol) {
+        boolean result = false;
+        for (int i = 0; i < dataSymbol.length; i++) {
+            if (dataSymbol[i][i] == 'X') {
+                result = bingoVertical(dataSymbol, i) || bingo(dataSymbol, i);
+                break;
+            }
+        }
+        return result;
+    }
 }
