@@ -17,4 +17,16 @@ public class MatrixSumTest {
         };
         assertThat(matrixSum.summary(data), is(45));
     }
+
+    @Test
+    public void whenThree() {
+        MatrixSum matrixSum = new MatrixSum();
+        int[][] in = {
+                {1, 2, 1},
+                {1, 2, 0}
+        };
+        int expect = 7;
+        int rsl = matrixSum.summary(in);
+        assertThat(rsl, is(expect));
+    }
 }
