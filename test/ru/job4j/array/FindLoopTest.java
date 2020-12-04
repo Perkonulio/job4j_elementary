@@ -19,7 +19,7 @@ public class FindLoopTest {
     public void loopFromArrayNoExpected() {
         FindLoop findLoop = new FindLoop();
         int[] number = {1, 2, 4, 5, 8};
-        int expected = 4;
+        int expected = -1;
         assertThat(findLoop.loopFromArray(number, 9), is(expected));
     }
 
@@ -35,7 +35,7 @@ public class FindLoopTest {
     public void loopFromArrayInRangeOut() {
         FindLoop findLoop = new FindLoop();
         int[] inputData = {1, 2, 3, 4, 5, 8};
-        int expected = 2;
+        int expected = -1;
         assertThat(findLoop.loopFromArrayInRange(inputData, 1, 2, 5), is(expected));
     }
 }
