@@ -4,11 +4,9 @@ public class MatrixCheck {
     public boolean bingo(char[][] dataSymbol, int row) {
         boolean result = true;
         for (int i = 0; i < dataSymbol.length; i++) {
-            for (int j = 0; j < dataSymbol[i].length; j++) {
-                if (dataSymbol[row][j] != 'X') {
-                    result = false;
-                    break;
-                }
+            if (dataSymbol[row][i] != 'X') {
+                result = false;
+                break;
             }
         }
         return result;
@@ -17,11 +15,9 @@ public class MatrixCheck {
     public boolean bingoVertical(char[][] dataSymbol, int column) {
         boolean result = true;
         for (int i = 0; i < dataSymbol.length; i++) {
-            for (int j = 0; j < dataSymbol.length; j++) {
-                if (dataSymbol[i][column] != 'X') {
-                    result = false;
-                    break;
-                }
+            if (dataSymbol[i][column] != 'X') {
+                result = false;
+                break;
             }
         }
         return result;
@@ -40,7 +36,9 @@ public class MatrixCheck {
         for (int i = 0; i < dataSymbol.length; i++) {
             if (dataSymbol[i][i] == 'X') {
                 result = bingoVertical(dataSymbol, i) || bingo(dataSymbol, i);
-                break;
+                if (result) {
+                    break;
+                }
             }
         }
         return result;

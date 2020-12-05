@@ -23,12 +23,12 @@ public class MatrixCheckTest {
     public void whenHasMonoVertical() {
         MatrixCheck matrixCheck = new MatrixCheck();
         char[][] input = {
-                {' ', ' ', 'X'},
-                {' ', ' ', 'X'},
-                {' ', ' ', 'X'},
+                {' ', 'X', ' '},
+                {' ', 'X', ' '},
+                {' ', 'X', ' '},
         };
         boolean result = matrixCheck.bingoVertical(input, 1);
-        assertThat(result, is(false));
+        assertThat(result, is(true));
     }
 
     @Test
