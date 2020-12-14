@@ -6,8 +6,11 @@ public class Max {
         return max;
     }
 
-    public static void main(String[] args) {
-        Max maximum = new Max();
-        System.out.println(maximum.result(5, 6));
+    public int result(int a, int b, int c) {
+        return result(result(a, b), c);
+    }
+
+    public int result(int a, int b, int c, int d) {
+        return result(result(a, b), result(c, d));
     }
 }

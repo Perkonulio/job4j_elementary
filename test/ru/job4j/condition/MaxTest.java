@@ -25,4 +25,15 @@ public class MaxTest {
         assertThat(maximum.result(6, 6), is(6));
     }
 
+    @Test
+    public void result() {
+        Max maximum = new Max();
+        assertThat(maximum.result(6, 8, 10), is(10));
+    }
+
+    @Test
+    public void testResult() {
+        Max maximum = new Max();
+        assertThat(maximum.result(6, 8, 10, 12), is(12));
+    }
 }
