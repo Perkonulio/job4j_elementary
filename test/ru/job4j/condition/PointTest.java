@@ -18,7 +18,7 @@ public class PointTest {
     public void distance2() {
         Point point = new Point(0, 2);
         Point point1 = new Point(2, 4);
-        double expected = 2.8284271247461903;
+        double expected = 2.8;
         assertEquals(expected, point.distance(point1), 0.1);
     }
 
@@ -26,7 +26,7 @@ public class PointTest {
     public void distance3() {
         Point point = new Point(1, 4);
         Point point1 = new Point(4, 5);
-        double expected = 3.1622776601683795;
+        double expected = 3.1;
         assertEquals(expected, point.distance(point1), 0.1);
     }
 
